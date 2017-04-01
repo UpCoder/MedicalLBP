@@ -11,22 +11,16 @@ def extractFeature(dirPath):
         if singleDir.startswith('.'):
             continue
         artFileName = os.path.join(dirPath, singleDir, 'Tumor_New', 'Tumor_'+singleDir+"_ART.mhd")
-        ncFileName = os.path.join(dirPath, singleDir, 'Tumor_New', 'Tumor_' + singleDir + "_ART.mhd")
         print artFileName
         artImages = readFile.readSingleFile(artFileName)
-        ncImages = readFile.readSingleFile(ncFileName)
-        ncImagesROI = readFile.caluROI(ncImages)
         artImagesROI = readFile.caluROI(artImages)
-        [images1, images2] = imageRegistration(ncImagesROI,artImagesROI)
-        feature1 = lbp.caluLBP(images1)
-        feature2 = lbp.caluLBP(images2)
         feature = []
-        for index, value in enumerate(feature1):
-            singleLine = []
-            singleLine.extend(value[:])
-            singleLine.extend(feature2[index][:])
-            feature.append(singleLine)
-        print 'feature1 size is ', np.shape(feature1)
+        for i in range(np.shape(artImagesROI)[0]):
+            curSingleImage = artImagesROI[i, :, :]
+            curSingleImage = readFile.caluROI2D(curSingleImage)
+            singleFeature = lbp.caluLBP2D(curSingleImage)
+            feature.extend(singleFeature)
+        print 'feature size is ', np.shape(feature)
         #for x in range(len(feature)):
         #    allData.append(feature[x])
         allData.extend(feature)

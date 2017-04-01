@@ -31,6 +31,16 @@ def caluROI(image3D):
     print minZ, maxZ
     imageROI = image3D[minZ:maxZ+1, minY:maxY+1, minX:maxX+1]
     return imageROI
+
+def caluROI2D(image2D):
+    indexs = np.where(image2D != 0)
+    minY = np.min(indexs[:][1])
+    maxY = np.max(indexs[:][1])
+    minZ = np.min(indexs[:][0])
+    maxZ = np.max(indexs[:][0])
+    print minZ, maxZ
+    imageROI = image2D[minZ:maxZ + 1, minY:maxY + 1]
+    return imageROI
 # images = readSingleFile('C:/Users/GIVE/Documents/MATLAB/MedicalImage/trainData/Srr100/Tumor_New/Tumor_Srr100_NC.mhd')
 # usefulImage = findUsefulImage(images)
 # roiImage = caluROI(images)
