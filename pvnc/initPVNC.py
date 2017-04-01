@@ -22,11 +22,11 @@ def initLBP():
                             label1_2, label2_2, label3_2, label4_2, label5_2))
     print 'first line is ', np.shape(allData[0][:])
     print allData[0][:]
-    allLabel = getAllLabel(label,allCountArr)
-    print 'allCountArr is ',allCountArr
-    print  'allCountArr len is ',len(allCountArr)
-    print 'allCountArr is ',np.sum(allCountArr)
-    KCV.kCrossValidation(allData,allLabel,label,countArr=allCountArr)
+    allLabel = getAllLabel(label, allCountArr)
+    print 'allCountArr is ', allCountArr
+    print  'allCountArr len is ', len(allCountArr)
+    print 'allCountArr is ', np.sum(allCountArr)
+    KCV.kCrossValidation(allData, allLabel, label, countArr=allCountArr)
 
 def getAllLabel(label,allCountArr):
     result = []

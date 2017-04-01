@@ -1,6 +1,7 @@
 from sklearn.model_selection import KFold
 import numpy as np
 import myKNN as knn
+import mySVM as svm
 import matplotlib.pyplot as plt
 def kCrossValidation(allData,allLabel,trueLabel,countArr):
     kf = KFold(n_splits=5,shuffle=True)
@@ -14,6 +15,7 @@ def kCrossValidation(allData,allLabel,trueLabel,countArr):
     for train,test in kf.split(trueLabel):
         trainData, trainLabel, trainCountArr, trainTrueLabel, testData, testLabel, testCountArr, testTrueLabel = getTrainTestData(allData,allLabel,trueLabel,countArr,train,test)
         a,b = knn.myKNN(trainData,trainLabel,testData,testLabel,testTrueLabel,testCountArr)
+        # a, b = svm.myKNN(trainData, trainLabel, testData, testLabel, testTrueLabel, testCountArr)
         accuracy += a
         trueAccuracy += b
     accuracy = np.array(accuracy)/5

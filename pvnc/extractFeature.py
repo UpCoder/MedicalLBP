@@ -20,8 +20,8 @@ def extractFeature(dirPath):
         artImages = readFile.readSingleFile(artFileName)
         ncImages = readFile.findUsefulImage(readFile.readSingleFile(ncFileName))
         pvImages = readFile.findUsefulImage(readFile.readSingleFile(pvFileName))
-        [z1,y1,x1] = np.shape(ncImages)
-        [z2,y2,x2] = np.shape(pvImages)
+        [z1, y1, x1] = np.shape(ncImages)
+        [z2, y2, x2] = np.shape(pvImages)
         if z1 < z2:
             pvImages = pvImages[0:z1][:][:]
         elif z1 > z2:
@@ -47,8 +47,8 @@ def extractFeature(dirPath):
     allData[:][0:19] = min_max_scaler.fit_transform(allData[:][0:19])
     return allData, allCountArr
 def imageRegistration(images1,images2):
-    [z0,y0,x0] = np.shape(images1)
-    [z1,y1,x1] = np.shape(images2)
+    [z0, y0, x0] = np.shape(images1)
+    [z1, y1, x1] = np.shape(images2)
     if z0 < z1:
         images = images1
         otherImages = images2
@@ -71,7 +71,7 @@ def imageRegistration(images1,images2):
                 minImage = curImage1
         sameSizeImages.append(minImage)
     return images,np.array(sameSizeImages)
-def caluDist(x,y,x1,y1):
+def caluDist(x, y, x1, y1):
     return (x-x1)**2 + (y-y1)**2
 def caluCeter(data):
     [m,n] = np.shape(data)
