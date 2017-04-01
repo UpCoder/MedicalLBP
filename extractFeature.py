@@ -14,13 +14,13 @@ def extractFeature(dirPath):
         print artFileName
         artImages = readFile.readSingleFile(artFileName)
         artImagesROI = readFile.caluROI(artImages)
-        feature = []
-        for i in range(np.shape(artImagesROI)[0]):
-            curSingleImage = artImagesROI[i, :, :]
-            curSingleImage = readFile.caluROI2D(curSingleImage)
-            singleFeature = lbp.caluLBP2D(curSingleImage)
-            feature.extend(singleFeature)
-        print 'feature size is ', np.shape(feature)
+        feature = lbp.caluLBP(artImagesROI)
+        # for i in range(np.shape(artImagesROI)[0]):
+        #    curSingleImage = artImagesROI[i, :, :]
+        #    curSingleImage = readFile.caluROI2D(curSingleImage)
+        #    singleFeature = lbp.caluLBP2D(curSingleImage)
+        #    feature.extend(singleFeature)
+        #print 'feature size is ', np.shape(feature)
         #for x in range(len(feature)):
         #    allData.append(feature[x])
         allData.extend(feature)

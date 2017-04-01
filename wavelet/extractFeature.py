@@ -4,6 +4,7 @@ import readFile
 import numpy as np
 import caluLBP as lbp
 import wavelet.caluWavelet as wt
+from sklearn import preprocessing
 def extractFeature(dirPath):
     dirs = os.listdir(dirPath)
     allData = []
@@ -20,9 +21,9 @@ def extractFeature(dirPath):
             singleLine = []
             singleLine.extend(wt.caluSingleWavelet(readFile.caluROI2D(singleImage), 3))
             singleLine.extend(lbp.caluLBP2D(singleImage)[0][:])
-            print 'singleLine len is ', len(singleLine)
+            # print 'singleLine len is ', len(singleLine)
             feature.append(singleLine)
-            print 'feature len is ', len(feature), len(feature[0])
+            # print 'feature len is ', len(feature), len(feature[0])
         #for x in range(len(feature)):
         #    allData.append(feature[x])
         print 'feature size is ', np.shape(feature)
@@ -30,6 +31,8 @@ def extractFeature(dirPath):
         allCountArr.append(np.shape(feature)[0])
         print 'feature size is ',np.shape(feature)
         print 'allData size is ', np.shape(allData)
+    min_max_scaler = preprocessing.MinMaxScaler()
+    allData[:][0:11] = min_max_scaler.fit_transform(allData[:][0:11])
     return allData, allCountArr
 def imageRegistration(images1,images2):
     [z0,y0,x0] = np.shape(images1)
