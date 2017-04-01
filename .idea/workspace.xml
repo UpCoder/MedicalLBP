@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eae5ef0-d262-44b4-86fe-fbcfbe6b6ccf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/实验结果.docx" afterPath="$PROJECT_DIR$/实验结果.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extractFeature.py" afterPath="$PROJECT_DIR$/extractFeature.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wavelet/extractFeature.py" afterPath="$PROJECT_DIR$/wavelet/extractFeature.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MedicalLBP$initLBP.coverage" NAME="initLBP Coverage Results" MODIFIED="1491015677139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MedicalLBP$initWavelet.coverage" NAME="initWavelet Coverage Results" MODIFIED="1491016153649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wavelet" />
+    <SUITE FILE_PATH="coverage/MedicalLBP$initWavelet.coverage" NAME="initWavelet Coverage Results" MODIFIED="1491017115952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wavelet" />
     <SUITE FILE_PATH="coverage/MILBP$run.coverage" NAME="run Coverage Results" MODIFIED="1490930264061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MILBP$extractFeature.coverage" NAME="extractFeature Coverage Results" MODIFIED="1490940871584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MILBP$kCrossValidation.coverage" NAME="kCrossValidation Coverage Results" MODIFIED="1490950914005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="extractFeature.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wavelet/extractFeature.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="85">
+              <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -87,22 +85,10 @@
       <file leaf-file-name="caluWavelet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wavelet/caluWavelet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="460">
               <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
                 <element signature="e#24#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myKNN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myKNN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-              <folding>
-                <element signature="e#24#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -605,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491015590950</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="小波变换+LBP特征+归一化，然而效果影响并不大">
+      <created>1491016214413</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491016214413</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -639,11 +632,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="false" />
     <MESSAGE value="不再是计算整体的ROI，而是分层计算ROI，效果和整体计算ROI差别不大" />
     <MESSAGE value="增加了小波变换的特征，单独使用小波变换的效果是60%左右，1、&#9;三层小波变换计算能量 特征一共是12维度" />
     <MESSAGE value="针对每层提取ROI" />
     <MESSAGE value="小波变换+LBP特征" />
-    <option name="LAST_COMMIT_MESSAGE" value="小波变换+LBP特征" />
+    <MESSAGE value="小波变换+LBP特征+归一化，然而效果影响并不大" />
+    <option name="LAST_COMMIT_MESSAGE" value="小波变换+LBP特征+归一化，然而效果影响并不大" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wavelet/caluWavelet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="e#24#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/caluLBP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -949,10 +934,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wavelet/caluWavelet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wavelet/extractFeature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="85">
+          <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>
