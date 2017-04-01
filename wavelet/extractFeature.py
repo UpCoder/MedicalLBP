@@ -17,9 +17,15 @@ def extractFeature(dirPath):
         artImagesROI = readFile.caluROI(artImages)
         feature = []
         for singleImage in artImagesROI:
-            feature.append(wt.caluSingleWavelet(readFile.caluROI2D(singleImage), 3))
+            singleLine = []
+            singleLine.extend(wt.caluSingleWavelet(readFile.caluROI2D(singleImage), 3))
+            singleLine.extend(lbp.caluLBP2D(singleImage)[0][:])
+            print 'singleLine len is ', len(singleLine)
+            feature.append(singleLine)
+            print 'feature len is ', len(feature), len(feature[0])
         #for x in range(len(feature)):
         #    allData.append(feature[x])
+        print 'feature size is ', np.shape(feature)
         allData.extend(feature)
         allCountArr.append(np.shape(feature)[0])
         print 'feature size is ',np.shape(feature)

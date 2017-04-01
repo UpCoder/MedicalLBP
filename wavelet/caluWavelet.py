@@ -25,6 +25,7 @@ def caluSingleWavelet(data,n):
         result.append(caluWaveletPacketEnergy(CV))
         result.append(caluWaveletPacketEnergy(CD))
         data = CA
+    print 'calu Wavelet size is ',np.shape(result)
     return result
 def caluWaveletPacketEnergy(image):
     # print np.shape(image)
