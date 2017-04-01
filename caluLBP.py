@@ -25,6 +25,7 @@ def caluLBP2D(images):
     r = 3
     points = 8*3
     lbp = local_binary_pattern(curImage, points, r, 'uniform')
+    print 'max Diff is ',np.max(lbp)-np.min(lbp)
     hists = np.histogram(lbp, np.max(lbp)-np.min(lbp))
 
     allSum = np.sum(hists[0][0:-2])
