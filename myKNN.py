@@ -25,6 +25,7 @@ def myKNN(data,label,testData,testLabel,testTrueLabel,countArr):
                     flag = True
                     break
             if flag == False:
+                print 'predicted error predicted:real:', indexs[0], ' : ', testTrueLabel[i]
                 errorCount += 1
         trueAccuracy.append(1-((errorCount*1.0)/(len(countArr)*1.0)))  # 经过投票之后的结果的准确率
         print 'accuracy is ', accuracy

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4eae5ef0-d262-44b4-86fe-fbcfbe6b6ccf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/实验结果.docx" afterPath="$PROJECT_DIR$/实验结果.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wavelet/extractFeature.py" afterPath="$PROJECT_DIR$/wavelet/extractFeature.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myKNN.py" afterPath="$PROJECT_DIR$/myKNN.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +15,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MedicalLBP$initLBP.coverage" NAME="initLBP Coverage Results" MODIFIED="1491015677139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MedicalLBP$initWavelet.coverage" NAME="initWavelet Coverage Results" MODIFIED="1491017115952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wavelet" />
+    <SUITE FILE_PATH="coverage/MedicalLBP$initWavelet.coverage" NAME="initWavelet Coverage Results" MODIFIED="1491017426000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wavelet" />
     <SUITE FILE_PATH="coverage/MILBP$run.coverage" NAME="run Coverage Results" MODIFIED="1490930264061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MILBP$extractFeature.coverage" NAME="extractFeature Coverage Results" MODIFIED="1490940871584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MILBP$kCrossValidation.coverage" NAME="kCrossValidation Coverage Results" MODIFIED="1490950914005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -38,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extractFeature.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="extractFeature.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wavelet/extractFeature.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -60,13 +61,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initLBP.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/initLBP.py">
+      <file leaf-file-name="kCrossValidation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kCrossValidation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="456">
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,6 +79,18 @@
             <state relative-caret-position="0">
               <caret line="0" column="47" lean-forward="true" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myKNN.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myKNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+              <folding>
+                <element signature="e#24#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,7 +163,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/LBP/LBPCircle.py" />
-        <option value="$PROJECT_DIR$/myKNN.py" />
         <option value="$PROJECT_DIR$/kCrossValidation.py" />
         <option value="$PROJECT_DIR$/readFile.py" />
         <option value="$PROJECT_DIR$/caluLBP.py" />
@@ -160,6 +172,7 @@
         <option value="$PROJECT_DIR$/wavelet/caluWavelet.py" />
         <option value="$PROJECT_DIR$/extractFeature.py" />
         <option value="$PROJECT_DIR$/wavelet/extractFeature.py" />
+        <option value="$PROJECT_DIR$/myKNN.py" />
       </list>
     </option>
   </component>
@@ -598,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491016214413</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="小波变换+LBP特征+归一化，然而效果影响并不大 尝试了不同的期相还是ART效果最好">
+      <created>1491017210287</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491017210287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +658,8 @@
     <MESSAGE value="针对每层提取ROI" />
     <MESSAGE value="小波变换+LBP特征" />
     <MESSAGE value="小波变换+LBP特征+归一化，然而效果影响并不大" />
-    <option name="LAST_COMMIT_MESSAGE" value="小波变换+LBP特征+归一化，然而效果影响并不大" />
+    <MESSAGE value="小波变换+LBP特征+归一化，然而效果影响并不大 尝试了不同的期相还是ART效果最好" />
+    <option name="LAST_COMMIT_MESSAGE" value="小波变换+LBP特征+归一化，然而效果影响并不大 尝试了不同的期相还是ART效果最好" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,26 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kCrossValidation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myKNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/initLBP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -950,6 +951,26 @@
           <caret line="14" column="92" lean-forward="false" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kCrossValidation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myKNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding>
+            <element signature="e#24#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
