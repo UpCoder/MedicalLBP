@@ -14,12 +14,12 @@ def caluSingleWavelet(data,n):
     #data = np.ones((4, 4), dtype=np.float64)
     result = []
     for i in range(n):
-        print 'data size is '
-        print np.shape(data)
+        # print 'data size is '
+        # print np.shape(data)
         coffess = wt.dwt2(data,'haar')
         CA,(CH,CV,CD) = coffess
-        print 'CA size is '
-        print np.shape(CA)
+        # print 'CA size is '
+        # print np.shape(CA)
         result.append(caluWaveletPacketEnergy(CA))
         result.append(caluWaveletPacketEnergy(CH))
         result.append(caluWaveletPacketEnergy(CV))
@@ -27,7 +27,7 @@ def caluSingleWavelet(data,n):
         data = CA
     return result
 def caluWaveletPacketEnergy(image):
-    print np.shape(image)
+    # print np.shape(image)
     [m, n] = np.shape(image)
     res = 0.0
     for i in range(m):

@@ -15,7 +15,9 @@ def extractFeature(dirPath):
         print artFileName
         artImages = readFile.readSingleFile(artFileName)
         artImagesROI = readFile.caluROI(artImages)
-        feature = wt.caluWavelet3D(artImagesROI,3)
+        feature = []
+        for singleImage in artImagesROI:
+            feature.append(wt.caluSingleWavelet(readFile.caluROI2D(singleImage), 3))
         #for x in range(len(feature)):
         #    allData.append(feature[x])
         allData.extend(feature)
