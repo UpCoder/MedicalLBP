@@ -15,5 +15,6 @@ def caluLBP(images):
         for j in range(len(hists[0])-1):
             energy.append(float((hists[0][j] * 1.0)/(allSum*1.0)))
         result.append(energy)
+    print 'caluLBP size is ', np.shape(result)
     return result
 
