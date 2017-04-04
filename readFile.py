@@ -1,9 +1,14 @@
+# -*- coding: utf-8 -*-
 from SimpleITK import SimpleITK as itk
 import numpy as np
 from skimage.feature import local_binary_pattern
 from skimage import io,exposure
 import matplotlib.pyplot as plt
 import cv2
+from skimage import feature
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 def readSingleFile(filePath):
     header = itk.ReadImage(filePath)
     image = itk.GetArrayFromImage(header)
@@ -41,15 +46,48 @@ def caluROI2D(image2D):
     print minZ, maxZ
     imageROI = image2D[minZ:maxZ + 1, minY:maxY + 1]
     return imageROI
-# images = readSingleFile('C:/Users/GIVE/Documents/MATLAB/MedicalImage/trainData/Srr100/Tumor_New/Tumor_Srr100_NC.mhd')
+# images = readSingleFile('D:\MedicalImage\Srr000\Tumor_New\Tumor_Srr000_ART.mhd')
 # usefulImage = findUsefulImage(images)
 # roiImage = caluROI(images)
-# print np.shape(images)
-# print np.shape(usefulImage)
-# print np.shape(roiImage)
 # radius = 3
 # n_points = 8 * radius
-# lbp = local_binary_pattern(roiImage[1,:,:], n_points, radius,'uniform')
+# lbp1 = local_binary_pattern(roiImage[5, :, :], n_points, radius, 'default')
+# lbp2 = local_binary_pattern(roiImage[5, :, :], n_points, radius, 'ror')
+# lbp3 = local_binary_pattern(roiImage[5, :, :], n_points, radius, 'uniform')
+# lbp4 = local_binary_pattern(roiImage[5, :, :], n_points, radius, 'nri_uniform')
+#
+# plt.subplot(231)
+# plt.imshow(roiImage[5, :, :], cmap='gray')
+# plt.title('source image')
+# plt.yticks([])
+# plt.xticks([])
+#
+# plt.subplot(232)
+# plt.imshow(lbp1, cmap='gray')
+# plt.title('default')
+# plt.yticks([])
+# plt.xticks([])
+#
+# plt.subplot(233)
+# plt.imshow(lbp2, cmap='gray')
+# plt.title('ror')
+# plt.yticks([])
+# plt.xticks([])
+#
+# plt.subplot(235)
+# plt.imshow(lbp3, cmap='gray')
+# plt.title('uniform')
+# plt.yticks([])
+# plt.xticks([])
+#
+# plt.subplot(236)
+# plt.imshow(lbp4, cmap='gray')
+# plt.title('nri_uniform')
+# plt.yticks([])
+# plt.xticks([])
+#
+# plt.show()
+
 # lbpHist = np.histogram(lbp,bins=26)
 # print lbpHist[0]
 # print np.shape(lbpHist[0])

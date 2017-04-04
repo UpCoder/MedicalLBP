@@ -1,8 +1,9 @@
 from extractFeature import extractFeature as EF
 import numpy as np
 import kCrossValidation as KCV
+import KCrossValidationPR as KCVPR
 def initLBP():
-    dirPath = 'D:\\MedicalImage'
+    dirPath = 'D:\\MedicalImageAll'
     allData,allCountArr = EF(dirPath)
     label1_1 = (np.ones((18, 1)))
     label1_2 = (np.ones((18, 1)))
@@ -26,8 +27,8 @@ def initLBP():
     print 'allCountArr is ',allCountArr
     print  'allCountArr len is ',len(allCountArr)
     print 'allCountArr is ',np.sum(allCountArr)
-    KCV.kCrossValidation(allData,allLabel,label,countArr=allCountArr)
-
+    # KCV.kCrossValidation(allData,allLabel,label,countArr=allCountArr)
+    KCVPR.kCrossValidation(allData, allLabel, label, countArr=allCountArr)
 def getAllLabel(label,allCountArr):
     result = []
     for i in range(np.shape(label)[0]):
