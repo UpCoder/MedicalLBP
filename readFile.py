@@ -49,6 +49,8 @@ def caluROI2D(image2D):
 # images = readSingleFile('D:\MedicalImage\Srr000\Tumor_New\Tumor_Srr000_ART.mhd')
 # usefulImage = findUsefulImage(images)
 # roiImage = caluROI(images)
+# roiImage = cv2.imread('D://lean.jpg', cv2.IM)
+# roiImage[5, :, :] = roiImage
 # radius = 3
 # n_points = 8 * radius
 # lbp1 = local_binary_pattern(roiImage[5, :, :], n_points, radius, 'default')
